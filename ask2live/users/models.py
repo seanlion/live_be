@@ -18,7 +18,7 @@ class User(AbstractUser):
     followed_count = models.IntegerField(default=0) # 나를 팔로잉하는 사람 수
     following_count = models.IntegerField(default=0) # 내가 팔로잉하는 사람 수
     social_account = models.CharField(max_length=50, choices=SOCIAL_ACCOUNT, null=True)
-    bio = models.TextField(default="", blank=True)
+    bio = models.TextField(default="", blank=True) # 자기 소개
     rating = models.IntegerField(default=0) # 호스트들의 평점
     # session_list  = models.ForeignKey() # 유저가 진행한 세션 리스트 
     # order_list = models.ForeignKey() # 유저가 세션 오픈을 원해서 요청했던 세션 리스트
